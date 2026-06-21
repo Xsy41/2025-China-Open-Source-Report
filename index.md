@@ -181,10 +181,6 @@ const aiMembers = [
     name: '李扬',
   },
   {
-    avatar: withBase('/image/home/avatar/刘天栋.jpg'),
-    name: '刘天栋',
-  },
-  {
     avatar: withBase('/image/home/avatar/FeigeZhu.png'),
     name: 'Feige Zhu',
   },
