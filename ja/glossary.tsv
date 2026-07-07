@@ -13,6 +13,12 @@ zh	en	ja	note	status
 智能体	agent	エージェント	Used for AI agents in the preface.	Confirmed
 数据篇	data section	データ編	Chapter title.	Confirmed
 问卷篇	questionnaire section	アンケート編	Chapter title.	Confirmed
+问卷调查	questionnaire survey	アンケート調査	Use for survey activity/context; use アンケート for the instrument or chapter context.	Confirmed
+受访者	respondent	回答者	Use in questionnaire/survey analysis contexts.	Confirmed
+有效样本	valid response	有効回答	Use for valid survey responses, not physical samples.	Confirmed
+单选	single choice	単一選択	Question type in questionnaires.	Confirmed
+多选	multiple choice	複数選択	Question type in questionnaires.	Confirmed
+开放题	open-ended question	自由記述	Question type in questionnaires.	Confirmed
 卷首语	preface	巻頭言	Chapter title.	Confirmed
 开源人工智能篇	open source AI section	オープンソースAI編	Chapter title.	Confirmed
 开源具身智能篇	open source embodied intelligence section	オープンソースエンボディドAI編	Chapter title follows the confirmed 具身智能 glossary entry.	Confirmed
@@ -52,6 +58,9 @@ AI 原生	AI native	AIネイティブ	Use for technologies, products, or archite
 OSPO	Open Source Program Office	OSPO	Explain on first appearance as the organization or function responsible for open source strategy, compliance, and community participation inside a company.	Confirmed
 OSDGs	Open Source Development Goals	OSDGs	Explain as an evaluation framework for open source value including environment, society, and governance.	Confirmed
 OpenRank	OpenRank	OpenRank	Metric for evaluating contributor/project influence from collaboration relationships, not only raw activity counts.	Confirmed
+OpenRank 贡献度	OpenRank Contribution Impact	OpenRank 貢献度	Use for the metric representing substantive contribution within collaboration networks.	needs-review
+活跃开发者	active developer	アクティブ開発者	Developer who performed a defined contribution activity during the measurement period.	needs-review
+活跃仓库	active repository	アクティブリポジトリ	Repository with recorded activity during the measurement period.	needs-review
 生态引力	ecosystem gravity	エコシステムを引きつける力	Avoid literal 生態引力; explain as the ability of a project to attract global developers and organizations.	Confirmed
 Gitee	Gitee	Gitee	Chinese code hosting platform associated with OSCHINA.	Confirmed
 AtomGit	AtomGit	AtomGit	Chinese code hosting platform; keep official name.	Confirmed

@@ -144,6 +144,12 @@ Examples:
 - Add glossary entries with `status=needs-review` when important recurring terms are missing.
 - After editing, show `git diff --stat`, summarize changes, list glossary changes, list remaining Simplified Chinese strings, and do not commit automatically unless asked.
 
+## Questionnaire chapter rules
+
+- In questionnaire chapters, show the original Chinese wording with the Japanese translation on first appearance of a question, answer option, survey category, or response choice, using `中国語原文（日本語訳）`.
+- After the first appearance of the same wording, use only the Japanese translation; do not repeat the Chinese unnecessarily.
+- Apply the same rule to questionnaire terminology and actual answer options, for example `单选（単一選択）`, `多选（複数選択）`, `开放题（自由記述）`, `受访者（回答者）`, `有效样本（有効回答）`, and `非常了解（非常によく知っている）`.
+
 ## Commercialization chapter rules
 
 - In `ja/commercialization.md`, use Japanese report-style chapter headings such as `## 第一章｜...`, `## 第二章｜...`, and `## 第三章｜...`; do not use Chinese-style headings such as `## 一、...`. The introduction may remain `## はじめに`.
