@@ -134,60 +134,21 @@ Examples:
 - `大規模モデルのオープンソース・オープン等級標準`: explain as a standard for evaluating how open a large AI model is.
 - `デジタル公共インフラ（DPI）`: explain as shared digital foundations such as digital ID, payment, and data exchange systems.
 
-## Physical AI / embodied intelligence chapters
+## Open Source AI chapter rules
 
-- Preserve report-style Japanese. Use `〜である`, `〜した`, and `〜を示している` where the surrounding chapter uses that tone.
-- Do not make the text conversational, and do not add long explanatory paragraphs.
-- Prefer short parenthetical explanations on first appearance.
-- Preserve the original paragraph flow as much as possible.
-- Add explanations only where Japanese readers may not know the organization, platform, model type, benchmark, technical term, or policy term.
-
-Core terminology:
-
-- `具身智能`: use `フィジカルAI（Embodied AI）` on first appearance when needed, then `フィジカルAI`.
-- `VLA`: use `VLA（Vision-Language-Action、視覚・言語・行動を結びつけるモデル）` on first appearance when needed.
-- `VLM`: use `VLM（Vision-Language Model、視覚言語モデル）`.
-- `机器人基础模型`: use `ロボット基盤モデル` or `フィジカルAI基盤モデル`, depending on context.
-- `世界模型`: use `世界モデル`.
-- `人形机器人` / `人型机器人`: use `ヒューマノイドロボット`.
-- `机器人本体`: use `ロボット本体` or `機体`.
-- `机器人`: use `ロボット`.
-- `生态`: use `エコシステム`.
-- `场景`: use `利用シーン`, `現場`, or `用途`, depending on context.
-- `落地`: use `実用化`, `現場導入`, or `本番利用`.
-- `产业化`: use `産業化` or `事業化`.
-- `量产`: use `量産`.
-- `供应链`: use `サプライチェーン`.
-
-Avoid literal or awkward renderings such as:
-
-- `具身知能`
-- `身体化知能`
-- `生態`
-- `落地`
-- `賦能`
-- `シーン`
-- `閉ループ`
-- `高地`
-- `深水域`
-
-World model handling:
-
-- When `世界モデル` appears in embodied intelligence chapters, distinguish the meaning by context.
-- One route is control-loop world models: models that generate future visual states while directly outputting robot actions, often related to WAM / VA or robot control loops.
-- Another route is Interactive World Modeling: models that generate an explorable, interactive, temporally consistent virtual world in real time, conditioned on user controls such as keyboard, mouse, controller, or actions.
-- Explain this distinction concisely and preserve the report style.
-
-Explanations for Japanese readers:
-
-- For proper nouns in robotics / embodied intelligence chapters, consult `ja/entity_names.tsv`.
-- For unfamiliar Chinese companies, institutes, platforms, models, and benchmarks, add short parenthetical explanations on first appearance.
-- Examples: `清華大学智能産業研究院（AIR、清華大学のAI・産業応用研究機関）`, `上海人工知能実験室（Shanghai AI Laboratory、中国の大規模AI研究機関）`, `北京智源人工知能研究院（BAAI、中国の代表的なAI研究機関）`, `X Square Robot（中国のフィジカルAIスタートアップ）`, `Dexmal（中国のフィジカルAI企業）`.
-- Do not turn these into long company profiles.
-- For tables, prefer including both Japanese/Chinese display names and English names when that helps future readers search.
-- If the official English name is uncertain, keep the Chinese name and mark it in `ja/entity_names.tsv` as `needs-review`.
-- Keep model names, dataset names, and benchmark names in their original English / Chinese-English form unless a stable Japanese rendering exists.
-- Do not over-explain globally familiar terms such as AI, GitHub, Python, Linux, model, dataset, code, deployment, benchmark, RTX 4090, or Hugging Face.
+- Add a concise explanation at first appearance when an AI architecture term is important to understanding the text. Terms that commonly need this treatment include VLM / vision-language model, bounding boxes and JSON output, million-token context, Dense architecture, Mixture of Experts (MoE), expert modules, auxiliary-loss-free load balancing, MLA / Multi-head Latent Attention, KV Cache, long-context models, prefill, RAG, Lost in the Middle, Early Fusion, external image encoders, Context Engineering, Context Rot, Compaction, Context Pyramid, MCP / Model Context Protocol, GraphRAG, TreeRAG, and Passage Reordering.
+- Keep explanations reader-facing and short; do not turn the report into a tutorial. Do not explain globally familiar terms such as GitHub, Python, Linux, Hugging Face, Transformer, or JSON.
+- Preferred explanation patterns include:
+  - `VLM（視覚言語モデル。画像や動画を言語モデルと組み合わせて理解・処理するモデル）`
+  - `MoE（多数の「エキスパート」と呼ばれる部分モデルのうち、入力ごとに必要な一部だけを使う方式）`
+  - `KV Cache（過去のToken情報を保持し、長文推論でGPUメモリを大量に消費するキャッシュ）`
+  - `Lost in the Middle（長い入力の冒頭と末尾に比べ、中間部分の情報を見落としやすい問題）`
+  - `RAG（Retrieval-Augmented Generation、外部文書を検索して関連情報をモデルに渡す方式）`
+  - `MCP（業務システム、ファイル、API、データベース、開発環境などを必要に応じてモデルへ接続するための共通インターフェース）`
+- When a model outputs bounding boxes, coordinates, attributes, or JSON, explain briefly that it produces structured data for downstream business systems, rather than merely describing an image.
+- When discussing 1M-token or 10M-token context windows, clarify that the advertised window is often a maximum value; longer context increases cost and latency, prefill can be expensive, and hallucination risk can increase. Note where relevant that practical enterprise systems often combine intelligent chunking with advanced RAG instead of placing everything into one huge context.
+- Explain Context Engineering as system design that controls what information enters the model context, in what order and structure, with what freshness, and at what timing. Do not reduce it to better prompt wording.
+- Avoid literal or awkward expressions such as `生態`, `賦能`, `落地`, `高地`, `深水域`, `開源`, `大モデル`, and `力任せのスケーリング`. Prefer `エコシステム`, `支援する` / `実現する`, `実用化` / `現場導入`, `オープンソース`, `大規模モデル`, and `単純なスケーリング` as context requires.
 
 ## Per-chapter editing workflow
 
